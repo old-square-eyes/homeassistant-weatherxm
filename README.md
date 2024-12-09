@@ -2,7 +2,11 @@
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://hacs.xyz/)
 
-This is an UNOFFICIAL custom integration for integrating WeatherXM weather stations into Home Assistant. No warranty is provided. Use at your own risk.
+This is an UNOFFICIAL custom integration for integrating WeatherXM weather stations into Home Assistant. It is not supplied, maintained, or approved by WeatherXM.
+
+It is based on the official, public API https://api.weatherxm.com/api/v1/docs
+
+No warranty is provided. This integration is in Alpha. Use at your own risk.
 
 ## Features
 - Retrieves weather data from WeatherXM stations.
