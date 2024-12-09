@@ -19,7 +19,7 @@ This is a custom integration for integrating WeatherXM weather stations into Hom
 
 Alternatively, if the repository is not listed in HACS:
 1. Open **HACS > Integrations > Custom Repositories**.
-2. Add this repository URL: `https://github.com/yourusername/homeassistant-weatherxm` as a custom repository.
+2. Add this repository URL: `https://github.com/old-square-eyes/homeassistant-weatherxm` as a custom repository.
 3. Follow the steps above to install and configure.
 
 ## Configuration
