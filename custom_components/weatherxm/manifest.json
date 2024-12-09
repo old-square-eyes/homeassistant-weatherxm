@@ -1,0 +1,10 @@
+{
+    "domain": "weatherxm",
+    "name": "WeatherXM",
+    "version": "1.0.0",
+    "documentation": "https://api.weatherxm.com/api/v1/docs/#/",
+    "dependencies": [],
+    "codeowners": ["@yourusername"],
+    "requirements": ["requests"],
+    "config_flow": true
+}
