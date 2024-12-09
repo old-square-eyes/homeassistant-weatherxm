@@ -8,6 +8,8 @@ It is based on the official, public API https://api.weatherxm.com/api/v1/docs
 
 No warranty is provided. This integration is in Alpha. Use at your own risk.
 
+<img width="620" alt="Screenshot 2024-12-10 at 00 13 51" src="https://github.com/user-attachments/assets/e2f2982e-1868-4e36-b688-f9037fda15ac">
+
 ## Features
 - Retrieves weather data from WeatherXM stations.
 - Automatically refreshes authentication tokens.
