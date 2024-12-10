@@ -15,18 +15,18 @@ async def async_setup(hass: HomeAssistant, config: dict):
     return True
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
-    """Set up WeatherXM from a config entry."""
     _LOGGER.debug("Setting up WeatherXM entry with ID: %s", entry.entry_id)
 
-    # Store the config entry data in hass.data
-    hass.data[DOMAIN][entry.entry_id] = entry.data
+    try:
+        # Perform any required setup
+        hass.data.setdefault(DOMAIN, {})
+        hass.data[DOMAIN][entry.entry_id] = entry.data
 
-    # Check ConfigEntryState
-    if entry.state != ConfigEntryState.SETUP_IN_PROGRESS:
-        _LOGGER.warning("Config entry state is not SETUP_IN_PROGRESS: %s", entry.state)
-
-    # Forward the entry to the sensor platform
-    await hass.config_entries.async_forward_entry_setups(entry, ["sensor"])
+        # Forward entry setup
+        await hass.config_entries.async_forward_entry_setups(entry, ["sensor"])
+    except Exception as e:
+        _LOGGER.error(f"Error setting up WeatherXM entry: {e}")
+        raise ConfigEntryNotReady from e  # Raise this to defer setup until ready
     return True
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry):
